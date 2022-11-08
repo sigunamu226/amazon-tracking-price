@@ -20,7 +20,8 @@ Macbook Air M1での動作環境になります。
 3. `docker compose exec web python manage.py migrate`
 4. `docker compose exec web python manage.py createsuperuser`
 5. `docker compose exec web sh`で仮想環境に入り、６を実行。
-6. ```
+6. 
+```
 $ apt-get update
 $ apt-get install firefox-esr-l10n-ja
 ```
