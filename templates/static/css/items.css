@@ -1,0 +1,38 @@
+.main-container {
+  width: 90%;
+  margin: auto;
+}
+.main-container .title-row .add-button {
+  padding: 0.7rem 1.5rem;
+  background-color: #4ad697;
+  border: none;
+}
+.main-container .title-row .add-button a {
+  color: #effaf3;
+  text-decoration: none;
+}
+.main-container .title-row .add-button:hover {
+  opacity: 0.8;
+}
+.main-container .title-row .add-button:focus {
+  box-shadow: none;
+}
+.main-container .table-section {
+  margin-top: 4rem;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+.main-container .table-section .table {
+  table-layout: fixed;
+  word-break: break-all;
+}
+.main-container .table-section .table-hover > tbody > tr:hover {
+  --bs-table-accent-bg: #7effd36b;
+}
+.main-container .table-section .item-table-row {
+  vertical-align: middle;
+  text-align: center;
+}
+.main-container .table-section .item-table-row .item-image {
+  width: 100%;
+}

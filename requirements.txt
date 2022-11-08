@@ -1,0 +1,6 @@
+Django==3.2
+psycopg2
+requests
+selenium
+bs4
+Pillow

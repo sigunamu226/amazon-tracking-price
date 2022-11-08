@@ -1,0 +1,27 @@
+.header-title {
+  color: #000000;
+  text-decoration: none;
+}
+.header-title:hover {
+  color: #000000;
+}
+.navbar .nav-item .dropdown-menu {
+  left: -50%;
+}
+.navbar .nav-item .dropdown-toggle {
+  display: flex;
+}
+.navbar .nav-item .image_circle  {
+  width: 40px;
+  height:40px;
+  border-radius:50%;
+  background-image: url("/templates/static/img/ireina.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.navbar .nav-item .user-name {
+  margin: auto 5px;
+}
+.navbar .nav-item .dropdown-toggle::after {
+  margin: auto 5px;
+}

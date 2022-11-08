@@ -1,0 +1,22 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+    volumes:
+      - pgdatavol:/var/lib/postgresql/data # postgresqlのデータ領域である/var/lib/postgresql/dataのディレクトリにマウント
+
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8810
+    volumes:
+      - .:/code
+    ports:
+      - "8810:8810"
+    depends_on:
+      - db
+
+volumes:
+  pgdatavol: # データ永続化のため、pgdatavolというvolumeを作成

@@ -1,0 +1,58 @@
+{% extends 'templates/base.html' %} 
+
+{% block title %}価格追跡アプリ{% endblock %}
+
+{% block style %}
+<link
+  rel="stylesheet"
+  href="/templates/static/css/bootstrap/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="/templates/static/css/login.css" />
+{% endblock %} {% block content %}
+
+<div class="container">
+  <div class="card card-container">
+    {% if not success %}
+    <p class="text-center">そのメールアドレスは既に存在しています</p>
+    {% endif %}
+    <img
+      id="profile-img"
+      class="profile-img-card"
+      src="templates/static/img/ireina.jpg"
+    />
+    <p id="profile-name" class="profile-name-card"></p>
+
+    <form class="form-signin" action={% url 'signup' %} method="POST">
+        {% csrf_token %}
+        <span id="reauth-email" class="reauth-email"></span>
+        <input
+            type="email"
+            id="inputEmail"
+            name="email"
+            class="form-control"
+            placeholder="メールアドレス"
+            required
+            autofocus
+        />
+        <input
+            type="password"
+            id="inputPassword"
+            name="password"
+            class="form-control"
+            placeholder="パスワード"
+            required
+        />
+        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">
+            登録
+        </button>
+    </form>
+    <!-- /form -->
+    <a href={% url 'login' %} class="forgot-password">ログインはこちら</a>
+  </div>
+  <!-- /card-container -->
+</div>
+<!-- /container -->
+
+{%endblock%} {% block script %}
+<script src="/templates/static/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
