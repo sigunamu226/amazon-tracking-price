@@ -1,3 +1,5 @@
+from enum import unique
+import uuid
 from django.db import models
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 
@@ -12,6 +14,7 @@ class UserManager(BaseUserManager):
         )
 
         user.set_password(password)
+        user.id = str(uuid.uuid4())[:8]
         user.save(using=self._db)
         return user
 
@@ -20,7 +23,8 @@ class UserManager(BaseUserManager):
             email,
             password=password,
         )
-        user.staff = True
+        user.id = str(uuid.uuid4())[:8]
+        user.is_staff = True
         user.admin = True
         user.save(using=self._db)
         return user
@@ -31,8 +35,8 @@ class User(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
-    active = models.BooleanField(default=True)
-    staff = models.BooleanField(default=False) 
+    id = models.CharField(max_length=25, unique=True, primary_key=True)
+    is_staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
@@ -49,13 +53,5 @@ class User(AbstractBaseUser):
         return self.admin
 
     @property
-    def is_staff(self):
-        return self.staff
-
-    @property
     def is_admin(self):
         return self.admin
-
-    @property
-    def is_active(self):
-        return self.active

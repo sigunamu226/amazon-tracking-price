@@ -1,4 +1,5 @@
 import email
+import uuid
 from django.shortcuts import render
 from django.http import HttpRequest
 from accounts.models import User
@@ -30,6 +31,7 @@ class AccountView():
                 return render(request, accounts_path("signup"), {'success': success})
             user = User(email=params.get('email'))
             user.set_password(params.get('password'))
+            user.id = str(uuid.uuid4())[:8]
             user.save()
             login(request, user)
             return redirect('items')
