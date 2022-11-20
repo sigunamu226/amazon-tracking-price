@@ -36,3 +36,6 @@
 .main-container .table-section .item-table-row .item-image {
   width: 100%;
 }
+.main-container .table-section .item-table-row .item-url-link {
+  text-decoration: none;
+}
