@@ -1,3 +1,4 @@
+import uuid
 from django.shortcuts import render
 from items.forms import ItemRegistForm
 from items.models import Item
@@ -28,3 +29,11 @@ class ItemsView:
             return redirect("login")
         form = ItemRegistForm()
         return render(request, items_path('regist'), {'form': form})
+
+    def itemdelete(request: HttpRequest):
+        if not request.user.is_authenticated:
+            return redirect("login")
+        if request.POST:
+            deleteItemId = request.POST["delete_item_id"]
+            Item.objects.filter(id=deleteItemId).delete()
+        return redirect("items")

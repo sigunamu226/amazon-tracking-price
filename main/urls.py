@@ -11,4 +11,5 @@ urlpatterns = [
     path('logout', AccountView.logout, name="logout"),
     path('items/', ItemsView.itemtable, name="items"),
     path('items/regist', ItemsView.itemregist, name="items_regist"),
+    path('items/delete', ItemsView.itemdelete, name="items_delete")
 ]
