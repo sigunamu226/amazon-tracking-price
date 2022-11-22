@@ -1,0 +1,54 @@
+1669110684359	geckodriver	INFO	Listening on 127.0.0.1:45261
+1669110684985	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "52999" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileJ7PHLv"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1669110685432	Marionette	INFO	Marionette enabled
+1669110685437	Marionette	INFO	Listening on port 34769
+WebDriver BiDi listening on ws://localhost:52999
+Read port: 34769
+1669110685538	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileJ7PHLv/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:52999/devtools/browser/a26025d3-a2e3-4935-8d38-2e67e378463d
+JavaScript warning: https://www.amazon.co.jp/ASUS-%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-VG249Q1A-J-23-8%E3%82%A4%E3%83%B3%E3%83%81-FreeSync/dp/B09BCKPMSJ/ref=sr_1_8?keywords=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC&qid=1669110506&qu=eyJxc2MiOiI2Ljk3IiwicXNhIjoiNi40OSIsInFzcCI6IjUuOTUifQ%3D%3D&sprefix=ge%2Caps%2C167&sr=8-8 line 7 > injectedScript, line 1: WebGL warning: <Create>: WebglAllowWindowsNativeGl:false restricts context creation on this system.
+JavaScript warning: https://www.amazon.co.jp/ASUS-%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-VG249Q1A-J-23-8%E3%82%A4%E3%83%B3%E3%83%81-FreeSync/dp/B09BCKPMSJ/ref=sr_1_8?keywords=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC&qid=1669110506&qu=eyJxc2MiOiI2Ljk3IiwicXNhIjoiNi40OSIsInFzcCI6IjUuOTUifQ%3D%3D&sprefix=ge%2Caps%2C167&sr=8-8 line 7 > injectedScript, line 1: Failed to create WebGL context: WebGL creation failed: 
+* WebglAllowWindowsNativeGl:false restricts context creation on this system. ()
+* Exhausted GL driver options. (FEATURE_FAILURE_WEBGL_EXHAUSTED_DRIVERS)
+JavaScript warning: https://www.amazon.co.jp/ASUS-%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-VG249Q1A-J-23-8%E3%82%A4%E3%83%B3%E3%83%81-FreeSync/dp/B09BCKPMSJ/ref=sr_1_8?keywords=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC&qid=1669110506&qu=eyJxc2MiOiI2Ljk3IiwicXNhIjoiNi40OSIsInFzcCI6IjUuOTUifQ%3D%3D&sprefix=ge%2Caps%2C167&sr=8-8 line 7 > injectedScript, line 1: WebGL warning: <Create>: WebglAllowWindowsNativeGl:false restricts context creation on this system.
+JavaScript warning: https://www.amazon.co.jp/ASUS-%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-VG249Q1A-J-23-8%E3%82%A4%E3%83%B3%E3%83%81-FreeSync/dp/B09BCKPMSJ/ref=sr_1_8?keywords=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC&qid=1669110506&qu=eyJxc2MiOiI2Ljk3IiwicXNhIjoiNi40OSIsInFzcCI6IjUuOTUifQ%3D%3D&sprefix=ge%2Caps%2C167&sr=8-8 line 7 > injectedScript, line 1: Failed to create WebGL context: WebGL creation failed: 
+* WebglAllowWindowsNativeGl:false restricts context creation on this system. ()
+* Exhausted GL driver options. (FEATURE_FAILURE_WEBGL_EXHAUSTED_DRIVERS)
+JavaScript warning: https://images-fe.ssl-images-amazon.com/images/I/71uiRE+8NyL.js?AUIClients/FWCIMAssets, line 289: WebGL warning: <Create>: WebglAllowWindowsNativeGl:false restricts context creation on this system.
+JavaScript warning: https://images-fe.ssl-images-amazon.com/images/I/71uiRE+8NyL.js?AUIClients/FWCIMAssets, line 289: Failed to create WebGL context: WebGL creation failed: 
+* WebglAllowWindowsNativeGl:false restricts context creation on this system. ()
+* Exhausted GL driver options. (FEATURE_FAILURE_WEBGL_EXHAUSTED_DRIVERS)
+1669110786222	geckodriver	INFO	Listening on 127.0.0.1:41079
+1669110786593	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "46789" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilet814ff"
+*** You are running in headless mode.
+[GFX1-]: glxtest: libpci missing
+[GFX1-]: glxtest: Unable to open a connection to the X server
+[GFX1-]: glxtest: libEGL missing
+[GFX1-]: No GPUs detected via PCI
+1669110786834	Marionette	INFO	Marionette enabled
+1669110786839	Marionette	INFO	Listening on port 37171
+WebDriver BiDi listening on ws://localhost:46789
+Read port: 37171
+1669110787002	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilet814ff/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.sys.mjs
+DevTools listening on ws://localhost:46789/devtools/browser/059f1e61-affc-49da-8d48-7acb07aaff63
+JavaScript warning: https://www.amazon.co.jp/ASUS-%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-VG249Q1A-J-23-8%E3%82%A4%E3%83%B3%E3%83%81-FreeSync/dp/B09BCKPMSJ/ref=sr_1_8?keywords=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC&qid=1669110506&qu=eyJxc2MiOiI2Ljk3IiwicXNhIjoiNi40OSIsInFzcCI6IjUuOTUifQ%3D%3D&sprefix=ge%2Caps%2C167&sr=8-8 line 7 > injectedScript, line 1: WebGL warning: <Create>: WebglAllowWindowsNativeGl:false restricts context creation on this system.
+JavaScript warning: https://www.amazon.co.jp/ASUS-%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-VG249Q1A-J-23-8%E3%82%A4%E3%83%B3%E3%83%81-FreeSync/dp/B09BCKPMSJ/ref=sr_1_8?keywords=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC&qid=1669110506&qu=eyJxc2MiOiI2Ljk3IiwicXNhIjoiNi40OSIsInFzcCI6IjUuOTUifQ%3D%3D&sprefix=ge%2Caps%2C167&sr=8-8 line 7 > injectedScript, line 1: Failed to create WebGL context: WebGL creation failed: 
+* WebglAllowWindowsNativeGl:false restricts context creation on this system. ()
+* Exhausted GL driver options. (FEATURE_FAILURE_WEBGL_EXHAUSTED_DRIVERS)
+JavaScript warning: https://www.amazon.co.jp/ASUS-%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-VG249Q1A-J-23-8%E3%82%A4%E3%83%B3%E3%83%81-FreeSync/dp/B09BCKPMSJ/ref=sr_1_8?keywords=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC&qid=1669110506&qu=eyJxc2MiOiI2Ljk3IiwicXNhIjoiNi40OSIsInFzcCI6IjUuOTUifQ%3D%3D&sprefix=ge%2Caps%2C167&sr=8-8 line 7 > injectedScript, line 1: WebGL warning: <Create>: WebglAllowWindowsNativeGl:false restricts context creation on this system.
+JavaScript warning: https://www.amazon.co.jp/ASUS-%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-VG249Q1A-J-23-8%E3%82%A4%E3%83%B3%E3%83%81-FreeSync/dp/B09BCKPMSJ/ref=sr_1_8?keywords=%E3%82%B2%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC&qid=1669110506&qu=eyJxc2MiOiI2Ljk3IiwicXNhIjoiNi40OSIsInFzcCI6IjUuOTUifQ%3D%3D&sprefix=ge%2Caps%2C167&sr=8-8 line 7 > injectedScript, line 1: Failed to create WebGL context: WebGL creation failed: 
+* WebglAllowWindowsNativeGl:false restricts context creation on this system. ()
+* Exhausted GL driver options. (FEATURE_FAILURE_WEBGL_EXHAUSTED_DRIVERS)
