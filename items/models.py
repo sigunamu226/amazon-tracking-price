@@ -1,4 +1,5 @@
 from django.db import models
+from accounts.models import User
 
 from main.settings import IMAGE_DIR
 
@@ -9,6 +10,7 @@ class Item(models.Model):
     商品モデル
     """
 
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='items')
     name = models.CharField('商品名', max_length=500, db_index=True)
     image = models.ImageField(
         '商品画像', upload_to=IMAGE_DIR, db_index=True)

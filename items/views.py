@@ -1,4 +1,5 @@
 import uuid
+from django.contrib.auth import get_user_model
 from django.shortcuts import render
 from items.forms import ItemRegistForm
 from items.models import Item
@@ -19,9 +20,10 @@ class ItemsView:
                 url = form.cleaned_data["url"]
                 hope_price = form.cleaned_data["hope_price"]
                 item_list = amazonTrackingPrice(url)
-                item = Item(name=item_list[0], image=item_list[1], now_price=item_list[2], hope_price=hope_price, url=url)
+                item = Item(user=request.user, name=item_list[0], image=item_list[1], now_price=item_list[2], hope_price=hope_price, url=url)
                 item.save()
-        items = Item.objects.all()
+        user = request.user
+        items = user.items.all()
         return render(request, items_path('index'), {'items': items})
 
     def itemregist(request: HttpRequest):
