@@ -1,5 +1,6 @@
 from django.db import models
 from accounts.models import User
+from django.utils import timezone
 
 from main.settings import IMAGE_DIR
 
@@ -19,6 +20,7 @@ class Item(models.Model):
     recent_average = models.CharField('直近の平均価格', max_length=50, db_index=True, null=True, blank=True)
     fluctuating_value = models.CharField('変動値', max_length=50, db_index=True, null=True, blank=True)
     url = models.CharField('URL', max_length=1000, db_index=True)
+    updated_at = models.DateTimeField('更新日時', default=timezone.now())
 
     class Meta:
         verbose_name = '商品'
