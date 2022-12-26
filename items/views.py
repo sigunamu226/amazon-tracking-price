@@ -3,7 +3,7 @@ from items.forms import ItemRegistForm
 from items.models import Item
 from django.http import HttpRequest
 from main.common.template_path import items_path
-from items.service import registerItem
+from items.service import deleteItem, registerItem
 from django.shortcuts import redirect
 
 
@@ -32,6 +32,5 @@ class ItemsView:
         if not request.user.is_authenticated:
             return redirect("login")
         if request.POST:
-            deleteItemId = request.POST["delete_item_id"]
-            Item.objects.filter(id=deleteItemId).delete()
+            deleteItem(request.POST["delete_item_id"])
         return redirect("items")

@@ -1,4 +1,5 @@
 import io
+import os
 import requests
 from selenium import webdriver
 from bs4 import BeautifulSoup
@@ -40,3 +41,8 @@ def periodicUpdate(amazonURL):
     soup = getAmazonSoup(amazonURL)
     nowPrice = soup.find("span", class_="a-price-whole").get_text().replace(",","")
     return nowPrice
+
+def deleteItem(itemId):
+    deleteItem = Item.objects.get(id=itemId)
+    os.remove(str(deleteItem.image))
+    deleteItem.delete()
