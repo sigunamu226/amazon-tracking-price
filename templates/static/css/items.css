@@ -23,7 +23,7 @@
   padding: 1rem;
 }
 .main-container .table-section .table {
-  table-layout: fixed;
+  table-layout: auto;
   word-break: break-all;
 }
 .main-container .table-section .table-hover > tbody > tr:hover {
@@ -32,6 +32,9 @@
 .main-container .table-section .item-table-row {
   vertical-align: middle;
   text-align: center;
+}
+.main-container .table-section .item-table-row td {
+  width: 12%;
 }
 .main-container .table-section .item-table-row .item-image {
   width: 100%;
