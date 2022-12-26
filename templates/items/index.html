@@ -39,7 +39,6 @@
           <th scope="col">画像</th>
           <th scope="col">現在の価格</th>
           <th scope="col">希望価格</th>
-          <th scope="col">直近の平均価格</th>
           <th scope="col">変動値</th>
           <th scope="col">URL</th>
           <th scope="col" style="width: 5%">操作</th>
@@ -52,8 +51,7 @@
           <td class="col-3"><img class="item-image" src="/{{item.image}}"/></td>
           <td>{{item.now_price}}円</td>
           <td>{{item.hope_price}}円</td>
-          <td>{{item.recent_average}}円</td>
-          <td>{{item.fluctuating_value}}</td>
+          <td>{{item.fluctuating_value}}円</td>
           <td class="col-2"><a class="item-url-link" href="{{item.url}}">商品ページへ <i class="bi bi-box-arrow-up-right"></i></a></td>
           <td>
             <form action={% url 'items_delete' %} method="POST">
