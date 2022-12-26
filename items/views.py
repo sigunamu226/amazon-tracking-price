@@ -1,11 +1,9 @@
-import uuid
-from django.contrib.auth import get_user_model
 from django.shortcuts import render
 from items.forms import ItemRegistForm
 from items.models import Item
 from django.http import HttpRequest
 from main.common.template_path import items_path
-from items.service import amazonTrackingPrice
+from items.service import registerItem
 from django.shortcuts import redirect
 
 
@@ -19,9 +17,7 @@ class ItemsView:
             if form.is_valid():
                 url = form.cleaned_data["url"]
                 hope_price = form.cleaned_data["hope_price"]
-                item_list = amazonTrackingPrice(url)
-                item = Item(user=request.user, name=item_list[0], image=item_list[1], now_price=item_list[2], hope_price=hope_price, url=url)
-                item.save()
+                registerItem(url, request.user, hope_price)
         user = request.user
         items = user.items.all()
         return render(request, items_path('index'), {'items': items})
