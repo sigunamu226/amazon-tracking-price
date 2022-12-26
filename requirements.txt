@@ -4,3 +4,4 @@ requests
 selenium
 bs4
 Pillow
+apscheduler==3.9.1
