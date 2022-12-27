@@ -1,13 +1,10 @@
 from django.shortcuts import render
 from items.forms import ItemRegistForm
-from items.models import Item
 from django.http import HttpRequest
 from main.common.template_path import items_path
 from items.service import deleteItem, registerItem
 from django.shortcuts import redirect
 
-
-# Create your views here.
 class ItemsView:
     def itemtable(request: HttpRequest):
         if not request.user.is_authenticated:
@@ -20,13 +17,14 @@ class ItemsView:
                 registerItem(url, request.user, hope_price)
         user = request.user
         items = user.items.all()
-        return render(request, items_path('index'), {'items': items})
+        return render(request, items_path('index'), {'items': items, 'userEmail': user.email})
 
     def itemregist(request: HttpRequest):
         if not request.user.is_authenticated:
             return redirect("login")
         form = ItemRegistForm()
-        return render(request, items_path('regist'), {'form': form})
+        user = request.user
+        return render(request, items_path('regist'), {'form': form, 'userEmail': user.email})
 
     def itemdelete(request: HttpRequest):
         if not request.user.is_authenticated:
