@@ -52,12 +52,9 @@
           <td>{{item.now_price}}円</td>
           <td>{{item.hope_price}}円</td>
           <td>{{item.fluctuating_value}}円</td>
-          <td><a class="item-url-link" href="{{item.url}}">商品ページへ <i class="bi bi-box-arrow-up-right"></i></a></td>
+          <td><a class="item-url-link" href="{{item.url}}">Amazonページ <i class="bi bi-box-arrow-up-right"></i></a></td>
           <td>
-            <form action={% url 'items_delete' %} method="POST">
-              {% csrf_token %}
-              <button type="submit" class="btn btn-outline-danger" name="delete_item_id" value="{{item.id}}">削除</button>
-            </form>
+              <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#itemDeleteModal" onClick="sendValueToModal({{item.id}})">削除</button>
           </td>
         </tr>
         {% endfor %}
@@ -65,8 +62,32 @@
     </table>
   </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="itemDeleteModal" tabindex="-1" aria-labelledby="itemDeleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="itemDeleteModalLabel">最終確認</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        この商品情報を一覧から削除しますか？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+        <form action={% url 'items_delete' %} method="POST">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-outline-danger" id="modal-delete-item"  name="delete-item-id">削除</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 {%endblock%} 
 
 {% block script %}
 <script src="/templates/static/js/bootstrap.bundle.min.js"></script>
+<script src="/templates/static/js/index.js"></script>
 {% endblock %}

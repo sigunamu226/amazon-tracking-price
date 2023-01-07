@@ -30,5 +30,5 @@ class ItemsView:
         if not request.user.is_authenticated:
             return redirect("login")
         if request.POST:
-            deleteItem(request.POST["delete_item_id"])
+            deleteItem(request.POST["delete-item-id"])
         return redirect("items")
