@@ -1,6 +1,6 @@
 .main-container {
   width: 90%;
-  margin: auto;
+  margin: 6rem auto 1rem;
 }
 .main-container .title-row .add-button {
   padding: 0.7rem 1.5rem;
