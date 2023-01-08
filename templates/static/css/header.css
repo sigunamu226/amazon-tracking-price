@@ -8,16 +8,19 @@
 .navbar .nav-item .dropdown-menu {
   padding: 1rem;
 }
+.navbar .nav-item .dropdown-menu li {
+  white-space: nowrap;
+}
 .navbar .nav-item .dropdown-menu .dropdown-item {
   padding: 0;
 }
 .navbar .nav-item .dropdown-toggle {
   display: flex;
 }
-.navbar .nav-item .image_circle  {
+.navbar .nav-item .image_circle {
   width: 40px;
-  height:40px;
-  border-radius:50%;
+  height: 40px;
+  border-radius: 50%;
   background-image: url("/templates/static/img/ireina.jpg");
   background-position: center;
   background-size: cover;
