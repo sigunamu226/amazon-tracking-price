@@ -31,35 +31,37 @@
   </div>
 
   <hr class="mt-4" />
-  <div class="row table-section">
-    <table class="table table-hover">
-      <thead>
-        <tr class="item-table-row">
-          <th scope="col">商品名</th>
-          <th scope="col">画像</th>
-          <th scope="col">現在の価格</th>
-          <th scope="col">希望価格</th>
-          <th scope="col">変動値</th>
-          <th scope="col">URL</th>
-          <th scope="col" style="width: 5%">操作</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for item in items %}
-        <tr class="item-table-row">
-          <th scope="row">{{item.name}}</th>
-          <td><img class="item-image" src="/{{item.image}}"/></td>
-          <td>{{item.now_price}}円</td>
-          <td>{{item.hope_price}}円</td>
-          <td>{{item.fluctuating_value}}円</td>
-          <td><a class="item-url-link" href="{{item.url}}">Amazonページ <i class="bi bi-box-arrow-up-right"></i></a></td>
-          <td>
-              <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#itemDeleteModal" onClick="sendValueToModal({{item.id}})">削除</button>
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+  <div class="table-section">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr class="item-table-header-row">
+            <th scope="col">商品名</th>
+            <th scope="col">画像</th>
+            <th scope="col">現在の価格</th>
+            <th scope="col">希望価格</th>
+            <th scope="col">変動値</th>
+            <th scope="col">URL</th>
+            <th scope="col">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in items %}
+          <tr class="item-table-row">
+            <th scope="row">{{item.name}}</th>
+            <td style="width: 10%"><img class="item-image" src="/{{item.image}}"/></td>
+            <td>{{item.now_price}}円</td>
+            <td>{{item.hope_price}}円</td>
+            <td>{{item.fluctuating_value}}円</td>
+            <td><a class="item-url-link" href="{{item.url}}">Amazonページ <i class="bi bi-box-arrow-up-right"></i></a></td>
+            <td>
+                <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#itemDeleteModal" onClick="sendValueToModal({{item.id}})">削除</button>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
