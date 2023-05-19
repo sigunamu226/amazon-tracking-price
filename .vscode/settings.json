@@ -1,4 +1,8 @@
 {
-  "prettier.embeddedLanguageFormatting": "off",
-  "prettier.arrowParens": "avoid"
+  "prettier.embeddedLanguageFormatting": "auto",
+  "prettier.arrowParens": "avoid",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.formatting.provider": "none"
 }

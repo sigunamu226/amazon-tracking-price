@@ -15,7 +15,7 @@
 
 {% include 'templates/layouts/header.html' %}
 
-<div class="main-container pt-5">
+<div class="main-container">
   <div class="row regist-row">
     <form action={% url 'items' %} method="POST">
         {% csrf_token %}
