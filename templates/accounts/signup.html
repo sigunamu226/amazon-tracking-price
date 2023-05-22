@@ -1,13 +1,14 @@
 {% extends 'templates/base.html' %} 
+{% load static %}
 
 {% block title %}価格追跡アプリ{% endblock %}
 
 {% block style %}
 <link
   rel="stylesheet"
-  href="/templates/static/css/bootstrap/bootstrap.min.css"
+  href="{% static '/css/bootstrap/bootstrap.min.css' %}"
 />
-<link rel="stylesheet" href="/templates/static/css/login.css" />
+<link rel="stylesheet" href="{% static '/css/login.css' %}" />
 {% endblock %} {% block content %}
 
 <div class="container">
@@ -18,7 +19,7 @@
     <img
       id="profile-img"
       class="profile-img-card"
-      src="templates/static/img/ireina.jpg"
+      src="{% static '/img/ireina.jpg' %}"
     />
     <p id="profile-name" class="profile-name-card"></p>
 
@@ -54,5 +55,5 @@
 <!-- /container -->
 
 {%endblock%} {% block script %}
-<script src="/templates/static/js/bootstrap.bundle.min.js"></script>
+<script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
 {% endblock %}

@@ -1,14 +1,15 @@
-{% extends 'templates/base.html' %} 
+{% extends 'templates/base.html' %}
+{% load static %}
 
 {% block title %}監視商品登録{% endblock %}
 
 {% block style %}
 <link
   rel="stylesheet"
-  href="/templates/static/css/bootstrap/bootstrap.min.css"
+  href="{% static '/css/bootstrap/bootstrap.min.css' %}"
 />
-<link rel="stylesheet" href="/templates/static/css/header.css" />
-<link rel="stylesheet" href="/templates/static/css/items.css" />
+<link rel="stylesheet" href="{% static '/css/header.css' %}" />
+<link rel="stylesheet" href="{% static '/css/items.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -34,5 +35,5 @@
 {%endblock%} 
 
 {% block script %}
-<script src="/templates/static/js/bootstrap.bundle.min.js"></script>
+<script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
 {% endblock %}
